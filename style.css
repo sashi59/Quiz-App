@@ -1,0 +1,118 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Popins', sans-serif;
+    box-sizing: border-box;
+}
+html, body{
+    height: 100vh;
+    width: 100%;
+}
+
+body{
+    background: linear-gradient(120deg, rgba(9, 9, 227, 0.899),rgba(48, 103, 230, 0.736));
+}
+.app{
+    width: 100%;
+    max-width: 500px;
+    background-color: #fff;
+    position: relative;
+    padding: 30px;
+    margin: 100px auto;
+    border-radius: 10px;
+}
+.app h1{
+    font-size: 35px;
+    font-weight: 800;
+    border-bottom: 1px solid #000;
+}
+.quiz{
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: 20px;
+    position: relative;
+}
+#question{
+    padding: 5px 0;
+}
+#answer-buttons{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+.btn{
+    height: 40px;
+    margin: 10px 0;
+    padding: 10px 20px;
+    border-radius: 4px;
+    outline: 0;
+    background-color: #fff;
+    border: 1px solid #000;
+    text-align: start;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all ease 0.4s;
+}
+.btn:hover:not([disabled]){
+    background-color: #222;
+    color: #fff;
+}
+.btn:disabled{
+    cursor: no-drop;
+}
+#next-button{
+    background-color: rgba(0, 123, 255, 0.743);
+    display: block;
+    padding: 10px 20px;
+    width: 145px;
+    outline: 0;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    font-size: 18px;
+    transform: translateX(100%);
+    margin-top: 10px;
+    cursor: pointer;
+    transition: all ease 0.4s;
+}
+#next-button:hover{
+    scale: 1.1;
+    border: 1px solid black;
+    transform: translateX(90%);
+}
+.correct{
+    background-color: rgba(12, 197, 12, 0.848);
+
+}
+.incorrect{
+    background-color: rgba(233, 87, 87, 0.807);
+    
+}
+
+@media screen and (max-width: 500px) {
+    .app{
+        width: 80%;
+        max-width: 400px;
+        
+    }
+    .app h1{
+        
+        font-weight: 700;
+        
+    }
+    #question{
+        padding: 8px 0;
+        font-size: 25px;
+    }
+    .btn{
+        height: 35px;
+        padding: 8px 20px;
+    }
+    #next-button{
+        background-color: rgba(0, 123, 255, 0.743);
+        padding: 10px 20px;
+        width: 120px;
+        font-size: 16px;
+        transform: translateX(65%);
+        
+    }
+}
